@@ -1,0 +1,110 @@
+import React from 'react';
+import { Image, Text, View, TouchableOpacity } from 'react-native';
+import { AntDesign, Entypo } from '@expo/vector-icons';
+
+const BookAppIAScreen1 = ({ navigation }) => {
+    return (
+        <View style={{ flex: 1, backgroundColor: '#EAEDF2' }}>
+            <View style={{ flexDirection: 'row' }}>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <AntDesign name="arrowleft" size={30} color="black"
+                        style={{ paddingLeft: 15, paddingTop: 20, marginTop: 10 }} />
+                </TouchableOpacity>
+                <Text style={{ paddingLeft: 40, paddingTop: 30, marginTop: 0, fontSize: 30, fontWeight: 'bold' }} >
+                    Doctor Details
+        </Text>
+            </View>
+
+            <View style={{ alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', backgroundColor: '#fff', marginTop: 10, height: 120, width: 350 }}>
+                    <Image source={require('../assets/Doctor2.png')}
+                        style={{
+                            width: 100,
+                            height: 100,
+                            marginTop: 10,
+                            marginLeft: 5
+                        }}
+                    />
+                    <View>
+                        <Text style={{ fontSize: 25, paddingLeft: 20, paddingTop: 20 }}>
+                            Dr. Isha Ali
+            </Text>
+                        <Text style={{ fontSize: 15, paddingLeft: 20, paddingTop: 0, color: 'green' }}>
+                            Child Specialist
+            </Text>
+                        <Text style={{ fontSize: 20, paddingLeft: 15, paddingTop: 10, color: 'grey' }}>
+                            <Entypo name="location-pin" size={24} color="grey" />
+            NMC Hospital
+            </Text>
+                    </View>
+
+
+                </View>
+                <View style={{ backgroundColor: '#fff', marginTop: 10, height: 90, width: 350 }}>
+                    <Text style={{ fontSize: 20, paddingLeft: 5 }}>
+                        Short Description
+          </Text>
+                    <Text style={{ fontSize: 16, paddingLeft: 5, color: 'grey', marginTop: 1 }}>
+                        Isha Ali
+          </Text>
+                </View>
+                <View style={{ backgroundColor: '#fff', marginTop: 10, height: 70, width: 350 }}>
+                    <Text style={{ fontSize: 20, paddingLeft: 5 }}>
+                        Schedule
+          </Text>
+                    <Text style={{ fontSize: 16, paddingLeft: 5, color: 'grey', marginTop: 1 }}>
+                        Monday to Thursday
+          </Text>
+                </View>
+                <View style={{ backgroundColor: '#fff', marginTop: 10, height: 50, width: 350 }}>
+                    <Text style={{ fontSize: 20, paddingLeft: 5 }}>
+                        Location
+          </Text>
+                    <Text style={{ fontSize: 16, paddingLeft: 5, color: 'grey', marginTop: 1 }}>
+                        NMC Hospital
+          </Text>
+                </View>
+
+                <View style={{ flexDirection: 'row', justifyContent: 'space-around', backgroundColor: '#fff', marginTop: 10, height: 110, width: 350 }}>
+                    <Image source={require('../assets/Degree1.png')}
+                        style={{
+                            width: 70,
+                            height: 100,
+                            marginTop: 5,
+                            marginLeft: 10
+                        }}
+                    />
+                    <Image source={require('../assets/Degree2.png')}
+                        style={{
+                            width: 70,
+                            height: 100,
+                            marginTop: 5,
+                            marginLeft: 5
+                        }}
+                    />
+                    <Image source={require('../assets/Degree2.png')}
+                        style={{
+                            width: 150,
+                            height: 100,
+                            marginTop: 5,
+                            marginLeft: 5
+                        }}
+                    />
+                </View>
+                <TouchableOpacity onPress={() => navigation.navigate('BookAppIAScreen2')}
+                    style={{
+                        height: 70, width: 300, backgroundColor: '#000', padding: 10, alignItems: 'center',
+                        justifyContent: 'center', borderRadius: 40, marginTop: 20, borderWidth: 1
+                    }}
+                >
+                    <Text style={{ color: '#fff', fontSize: 20 }}>
+                        Book Physical Appointment
+      </Text>
+                </TouchableOpacity>
+            </View>
+
+        </View>
+    )
+}
+
+export default BookAppIAScreen1
